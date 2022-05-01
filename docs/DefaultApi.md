@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## JuguguFastGetNFTPost
 
-> InlineResponse200 JuguguFastGetNFTPost (InlineObject inlineObject = null)
+> InlineResponse2001 JuguguFastGetNFTPost (InlineObject2 inlineObject2 = null)
 
 3.jugugu获取小红花POAP
 
@@ -36,17 +36,92 @@ namespace Example
         {
             Configuration.Default.BasePath = "http://localhost";
             var apiInstance = new DefaultApi(Configuration.Default);
-            var inlineObject = new InlineObject(); // InlineObject |  (optional) 
+            var inlineObject2 = new InlineObject2(); // InlineObject2 |  (optional) 
 
             try
             {
                 // 3.jugugu获取小红花POAP
-                InlineResponse200 result = apiInstance.JuguguFastGetNFTPost(inlineObject);
+                InlineResponse2001 result = apiInstance.JuguguFastGetNFTPost(inlineObject2);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
                 Debug.Print("Exception when calling DefaultApi.JuguguFastGetNFTPost: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse2001**](InlineResponse2001.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | 成功 |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## JuguguFastLoginPost
+
+> InlineResponse200 JuguguFastLoginPost (InlineObject inlineObject = null)
+
+2.注册jugugu登录
+
+使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class JuguguFastLoginPostExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "http://localhost";
+            var apiInstance = new DefaultApi(Configuration.Default);
+            var inlineObject = new InlineObject(); // InlineObject |  (optional) 
+
+            try
+            {
+                // 2.注册jugugu登录
+                InlineResponse200 result = apiInstance.JuguguFastLoginPost(inlineObject);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DefaultApi.JuguguFastLoginPost: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -86,84 +161,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## JuguguFastLoginPost
-
-> InlineResponse2001 JuguguFastLoginPost (InlineObject3 inlineObject3 = null)
-
-2.注册jugugu登录
-
-使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class JuguguFastLoginPostExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "http://localhost";
-            var apiInstance = new DefaultApi(Configuration.Default);
-            var inlineObject3 = new InlineObject3(); // InlineObject3 |  (optional) 
-
-            try
-            {
-                // 2.注册jugugu登录
-                InlineResponse2001 result = apiInstance.JuguguFastLoginPost(inlineObject3);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling DefaultApi.JuguguFastLoginPost: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inlineObject3** | [**InlineObject3**](InlineObject3.md)|  | [optional] 
-
-### Return type
-
-[**InlineResponse2001**](InlineResponse2001.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | 成功 |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## JuguguFastRegPost
 
-> InlineResponse2001 JuguguFastRegPost (InlineObject1 inlineObject1 = null)
+> InlineResponse200 JuguguFastRegPost (InlineObject1 inlineObject1 = null)
 
 1.注册jugugu
 
@@ -191,7 +191,7 @@ namespace Example
             try
             {
                 // 1.注册jugugu
-                InlineResponse2001 result = apiInstance.JuguguFastRegPost(inlineObject1);
+                InlineResponse200 result = apiInstance.JuguguFastRegPost(inlineObject1);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -238,7 +238,7 @@ No authorization required
 
 ## JuguguFastSignTxPost
 
-> Object JuguguFastSignTxPost (InlineObject2 inlineObject2 = null)
+> Object JuguguFastSignTxPost (InlineObject3 inlineObject3 = null)
 
 4.使用jugugu进行交易签名
 
@@ -261,12 +261,12 @@ namespace Example
         {
             Configuration.Default.BasePath = "http://localhost";
             var apiInstance = new DefaultApi(Configuration.Default);
-            var inlineObject2 = new InlineObject2(); // InlineObject2 |  (optional) 
+            var inlineObject3 = new InlineObject3(); // InlineObject3 |  (optional) 
 
             try
             {
                 // 4.使用jugugu进行交易签名
-                Object result = apiInstance.JuguguFastSignTxPost(inlineObject2);
+                Object result = apiInstance.JuguguFastSignTxPost(inlineObject3);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -285,7 +285,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
+ **inlineObject3** | [**InlineObject3**](InlineObject3.md)|  | [optional] 
 
 ### Return type
 

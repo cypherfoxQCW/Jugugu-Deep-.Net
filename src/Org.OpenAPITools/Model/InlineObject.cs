@@ -39,17 +39,12 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="InlineObject" /> class.
         /// </summary>
         /// <param name="phone">phone (required).</param>
-        /// <param name="address">address (required).</param>
         /// <param name="account">通过接入jugugu申请 (required).</param>
         /// <param name="secret">通过接入jugugu申请 (required).</param>
         /// <param name="time">int64类型 (required).</param>
-        /// <param name="token">通过登录获得，首次注册时也会获得 (required).</param>
+        /// <param name="randomtoken">可以由sha256函数随机产生，避免2分钟内重复，可用时间+其他唯一参数作为种子，防止重放攻击 (required).</param>
         /// <param name="openid">项目方账户系统的唯一识别码，用于绑定登录jugugu系统 (required).</param>
-        /// <param name="contract">正式网合约：cfx:acb2027ht5t916d323zjfw9knrdj42fm8ay9n7e3x0  测试网合约：cfxtest:acbk50byfusjyh7494rm8yd8xhnkdh9jyetgadzem4 (required).</param>
-        /// <param name="nftid">nftid (required).</param>
-        /// <param name="codestr">codestr (required).</param>
-        /// <param name="chaintype">这里填cfx即可 (required).</param>
-        public InlineObject(string phone = default(string), string address = default(string), string account = default(string), string secret = default(string), int time = default(int), string token = default(string), string openid = default(string), string contract = default(string), string nftid = default(string), string codestr = default(string), string chaintype = default(string))
+        public InlineObject(string phone = default(string), string account = default(string), string secret = default(string), int time = default(int), string randomtoken = default(string), string openid = default(string))
         {
             // to ensure "phone" is required (not null)
             if (phone == null)
@@ -59,16 +54,6 @@ namespace Org.OpenAPITools.Model
             else
             {
                 this.Phone = phone;
-            }
-            
-            // to ensure "address" is required (not null)
-            if (address == null)
-            {
-                throw new InvalidDataException("address is a required property for InlineObject and cannot be null");
-            }
-            else
-            {
-                this.Address = address;
             }
             
             // to ensure "account" is required (not null)
@@ -101,14 +86,14 @@ namespace Org.OpenAPITools.Model
                 this.Time = time;
             }
             
-            // to ensure "token" is required (not null)
-            if (token == null)
+            // to ensure "randomtoken" is required (not null)
+            if (randomtoken == null)
             {
-                throw new InvalidDataException("token is a required property for InlineObject and cannot be null");
+                throw new InvalidDataException("randomtoken is a required property for InlineObject and cannot be null");
             }
             else
             {
-                this.Token = token;
+                this.Randomtoken = randomtoken;
             }
             
             // to ensure "openid" is required (not null)
@@ -121,46 +106,6 @@ namespace Org.OpenAPITools.Model
                 this.Openid = openid;
             }
             
-            // to ensure "contract" is required (not null)
-            if (contract == null)
-            {
-                throw new InvalidDataException("contract is a required property for InlineObject and cannot be null");
-            }
-            else
-            {
-                this.Contract = contract;
-            }
-            
-            // to ensure "nftid" is required (not null)
-            if (nftid == null)
-            {
-                throw new InvalidDataException("nftid is a required property for InlineObject and cannot be null");
-            }
-            else
-            {
-                this.Nftid = nftid;
-            }
-            
-            // to ensure "codestr" is required (not null)
-            if (codestr == null)
-            {
-                throw new InvalidDataException("codestr is a required property for InlineObject and cannot be null");
-            }
-            else
-            {
-                this.Codestr = codestr;
-            }
-            
-            // to ensure "chaintype" is required (not null)
-            if (chaintype == null)
-            {
-                throw new InvalidDataException("chaintype is a required property for InlineObject and cannot be null");
-            }
-            else
-            {
-                this.Chaintype = chaintype;
-            }
-            
         }
         
         /// <summary>
@@ -168,12 +113,6 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Address
-        /// </summary>
-        [DataMember(Name="address", EmitDefaultValue=false)]
-        public string Address { get; set; }
 
         /// <summary>
         /// 通过接入jugugu申请
@@ -197,11 +136,11 @@ namespace Org.OpenAPITools.Model
         public int Time { get; set; }
 
         /// <summary>
-        /// 通过登录获得，首次注册时也会获得
+        /// 可以由sha256函数随机产生，避免2分钟内重复，可用时间+其他唯一参数作为种子，防止重放攻击
         /// </summary>
-        /// <value>通过登录获得，首次注册时也会获得</value>
-        [DataMember(Name="token", EmitDefaultValue=false)]
-        public string Token { get; set; }
+        /// <value>可以由sha256函数随机产生，避免2分钟内重复，可用时间+其他唯一参数作为种子，防止重放攻击</value>
+        [DataMember(Name="randomtoken", EmitDefaultValue=false)]
+        public string Randomtoken { get; set; }
 
         /// <summary>
         /// 项目方账户系统的唯一识别码，用于绑定登录jugugu系统
@@ -209,32 +148,6 @@ namespace Org.OpenAPITools.Model
         /// <value>项目方账户系统的唯一识别码，用于绑定登录jugugu系统</value>
         [DataMember(Name="openid", EmitDefaultValue=false)]
         public string Openid { get; set; }
-
-        /// <summary>
-        /// 正式网合约：cfx:acb2027ht5t916d323zjfw9knrdj42fm8ay9n7e3x0  测试网合约：cfxtest:acbk50byfusjyh7494rm8yd8xhnkdh9jyetgadzem4
-        /// </summary>
-        /// <value>正式网合约：cfx:acb2027ht5t916d323zjfw9knrdj42fm8ay9n7e3x0  测试网合约：cfxtest:acbk50byfusjyh7494rm8yd8xhnkdh9jyetgadzem4</value>
-        [DataMember(Name="contract", EmitDefaultValue=false)]
-        public string Contract { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Nftid
-        /// </summary>
-        [DataMember(Name="nftid", EmitDefaultValue=false)]
-        public string Nftid { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Codestr
-        /// </summary>
-        [DataMember(Name="codestr", EmitDefaultValue=false)]
-        public string Codestr { get; set; }
-
-        /// <summary>
-        /// 这里填cfx即可
-        /// </summary>
-        /// <value>这里填cfx即可</value>
-        [DataMember(Name="chaintype", EmitDefaultValue=false)]
-        public string Chaintype { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -245,16 +158,11 @@ namespace Org.OpenAPITools.Model
             var sb = new StringBuilder();
             sb.Append("class InlineObject {\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
-            sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Account: ").Append(Account).Append("\n");
             sb.Append("  Secret: ").Append(Secret).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
-            sb.Append("  Token: ").Append(Token).Append("\n");
+            sb.Append("  Randomtoken: ").Append(Randomtoken).Append("\n");
             sb.Append("  Openid: ").Append(Openid).Append("\n");
-            sb.Append("  Contract: ").Append(Contract).Append("\n");
-            sb.Append("  Nftid: ").Append(Nftid).Append("\n");
-            sb.Append("  Codestr: ").Append(Codestr).Append("\n");
-            sb.Append("  Chaintype: ").Append(Chaintype).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -295,11 +203,6 @@ namespace Org.OpenAPITools.Model
                     this.Phone.Equals(input.Phone))
                 ) && 
                 (
-                    this.Address == input.Address ||
-                    (this.Address != null &&
-                    this.Address.Equals(input.Address))
-                ) && 
-                (
                     this.Account == input.Account ||
                     (this.Account != null &&
                     this.Account.Equals(input.Account))
@@ -315,34 +218,14 @@ namespace Org.OpenAPITools.Model
                     this.Time.Equals(input.Time))
                 ) && 
                 (
-                    this.Token == input.Token ||
-                    (this.Token != null &&
-                    this.Token.Equals(input.Token))
+                    this.Randomtoken == input.Randomtoken ||
+                    (this.Randomtoken != null &&
+                    this.Randomtoken.Equals(input.Randomtoken))
                 ) && 
                 (
                     this.Openid == input.Openid ||
                     (this.Openid != null &&
                     this.Openid.Equals(input.Openid))
-                ) && 
-                (
-                    this.Contract == input.Contract ||
-                    (this.Contract != null &&
-                    this.Contract.Equals(input.Contract))
-                ) && 
-                (
-                    this.Nftid == input.Nftid ||
-                    (this.Nftid != null &&
-                    this.Nftid.Equals(input.Nftid))
-                ) && 
-                (
-                    this.Codestr == input.Codestr ||
-                    (this.Codestr != null &&
-                    this.Codestr.Equals(input.Codestr))
-                ) && 
-                (
-                    this.Chaintype == input.Chaintype ||
-                    (this.Chaintype != null &&
-                    this.Chaintype.Equals(input.Chaintype))
                 );
         }
 
@@ -357,26 +240,16 @@ namespace Org.OpenAPITools.Model
                 int hashCode = 41;
                 if (this.Phone != null)
                     hashCode = hashCode * 59 + this.Phone.GetHashCode();
-                if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
                 if (this.Account != null)
                     hashCode = hashCode * 59 + this.Account.GetHashCode();
                 if (this.Secret != null)
                     hashCode = hashCode * 59 + this.Secret.GetHashCode();
                 if (this.Time != null)
                     hashCode = hashCode * 59 + this.Time.GetHashCode();
-                if (this.Token != null)
-                    hashCode = hashCode * 59 + this.Token.GetHashCode();
+                if (this.Randomtoken != null)
+                    hashCode = hashCode * 59 + this.Randomtoken.GetHashCode();
                 if (this.Openid != null)
                     hashCode = hashCode * 59 + this.Openid.GetHashCode();
-                if (this.Contract != null)
-                    hashCode = hashCode * 59 + this.Contract.GetHashCode();
-                if (this.Nftid != null)
-                    hashCode = hashCode * 59 + this.Nftid.GetHashCode();
-                if (this.Codestr != null)
-                    hashCode = hashCode * 59 + this.Codestr.GetHashCode();
-                if (this.Chaintype != null)
-                    hashCode = hashCode * 59 + this.Chaintype.GetHashCode();
                 return hashCode;
             }
         }

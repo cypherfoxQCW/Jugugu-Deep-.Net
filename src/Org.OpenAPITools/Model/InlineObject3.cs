@@ -42,9 +42,13 @@ namespace Org.OpenAPITools.Model
         /// <param name="account">通过接入jugugu申请 (required).</param>
         /// <param name="secret">通过接入jugugu申请 (required).</param>
         /// <param name="time">int64类型 (required).</param>
-        /// <param name="randomtoken">可以由sha256函数随机产生，避免2分钟内重复，可用时间+其他唯一参数作为种子，防止重放攻击 (required).</param>
+        /// <param name="token">登录或者首次登录时获得 (required).</param>
+        /// <param name="paymentpass">可以自由设置也可以传“”空字符串，系统随机生成，建议让系统随机生成 (required).</param>
         /// <param name="openid">项目方账户系统的唯一识别码，用于绑定登录jugugu系统 (required).</param>
-        public InlineObject3(string phone = default(string), string account = default(string), string secret = default(string), int time = default(int), string randomtoken = default(string), string openid = default(string))
+        /// <param name="from">jugugu区块链地址，与phone对应 (required).</param>
+        /// <param name="unsigntxjson">unsigntxjson (required).</param>
+        /// <param name="chaintype">这里填cfx即可 (required).</param>
+        public InlineObject3(string phone = default(string), string account = default(string), string secret = default(string), int time = default(int), string token = default(string), string paymentpass = default(string), string openid = default(string), string from = default(string), List<string> unsigntxjson = default(List<string>), string chaintype = default(string))
         {
             // to ensure "phone" is required (not null)
             if (phone == null)
@@ -86,14 +90,24 @@ namespace Org.OpenAPITools.Model
                 this.Time = time;
             }
             
-            // to ensure "randomtoken" is required (not null)
-            if (randomtoken == null)
+            // to ensure "token" is required (not null)
+            if (token == null)
             {
-                throw new InvalidDataException("randomtoken is a required property for InlineObject3 and cannot be null");
+                throw new InvalidDataException("token is a required property for InlineObject3 and cannot be null");
             }
             else
             {
-                this.Randomtoken = randomtoken;
+                this.Token = token;
+            }
+            
+            // to ensure "paymentpass" is required (not null)
+            if (paymentpass == null)
+            {
+                throw new InvalidDataException("paymentpass is a required property for InlineObject3 and cannot be null");
+            }
+            else
+            {
+                this.Paymentpass = paymentpass;
             }
             
             // to ensure "openid" is required (not null)
@@ -104,6 +118,36 @@ namespace Org.OpenAPITools.Model
             else
             {
                 this.Openid = openid;
+            }
+            
+            // to ensure "from" is required (not null)
+            if (from == null)
+            {
+                throw new InvalidDataException("from is a required property for InlineObject3 and cannot be null");
+            }
+            else
+            {
+                this.From = from;
+            }
+            
+            // to ensure "unsigntxjson" is required (not null)
+            if (unsigntxjson == null)
+            {
+                throw new InvalidDataException("unsigntxjson is a required property for InlineObject3 and cannot be null");
+            }
+            else
+            {
+                this.Unsigntxjson = unsigntxjson;
+            }
+            
+            // to ensure "chaintype" is required (not null)
+            if (chaintype == null)
+            {
+                throw new InvalidDataException("chaintype is a required property for InlineObject3 and cannot be null");
+            }
+            else
+            {
+                this.Chaintype = chaintype;
             }
             
         }
@@ -136,11 +180,18 @@ namespace Org.OpenAPITools.Model
         public int Time { get; set; }
 
         /// <summary>
-        /// 可以由sha256函数随机产生，避免2分钟内重复，可用时间+其他唯一参数作为种子，防止重放攻击
+        /// 登录或者首次登录时获得
         /// </summary>
-        /// <value>可以由sha256函数随机产生，避免2分钟内重复，可用时间+其他唯一参数作为种子，防止重放攻击</value>
-        [DataMember(Name="randomtoken", EmitDefaultValue=false)]
-        public string Randomtoken { get; set; }
+        /// <value>登录或者首次登录时获得</value>
+        [DataMember(Name="token", EmitDefaultValue=false)]
+        public string Token { get; set; }
+
+        /// <summary>
+        /// 可以自由设置也可以传“”空字符串，系统随机生成，建议让系统随机生成
+        /// </summary>
+        /// <value>可以自由设置也可以传“”空字符串，系统随机生成，建议让系统随机生成</value>
+        [DataMember(Name="paymentpass", EmitDefaultValue=false)]
+        public string Paymentpass { get; set; }
 
         /// <summary>
         /// 项目方账户系统的唯一识别码，用于绑定登录jugugu系统
@@ -148,6 +199,26 @@ namespace Org.OpenAPITools.Model
         /// <value>项目方账户系统的唯一识别码，用于绑定登录jugugu系统</value>
         [DataMember(Name="openid", EmitDefaultValue=false)]
         public string Openid { get; set; }
+
+        /// <summary>
+        /// jugugu区块链地址，与phone对应
+        /// </summary>
+        /// <value>jugugu区块链地址，与phone对应</value>
+        [DataMember(Name="from", EmitDefaultValue=false)]
+        public string From { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Unsigntxjson
+        /// </summary>
+        [DataMember(Name="unsigntxjson", EmitDefaultValue=false)]
+        public List<string> Unsigntxjson { get; set; }
+
+        /// <summary>
+        /// 这里填cfx即可
+        /// </summary>
+        /// <value>这里填cfx即可</value>
+        [DataMember(Name="chaintype", EmitDefaultValue=false)]
+        public string Chaintype { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -161,8 +232,12 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Account: ").Append(Account).Append("\n");
             sb.Append("  Secret: ").Append(Secret).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
-            sb.Append("  Randomtoken: ").Append(Randomtoken).Append("\n");
+            sb.Append("  Token: ").Append(Token).Append("\n");
+            sb.Append("  Paymentpass: ").Append(Paymentpass).Append("\n");
             sb.Append("  Openid: ").Append(Openid).Append("\n");
+            sb.Append("  From: ").Append(From).Append("\n");
+            sb.Append("  Unsigntxjson: ").Append(Unsigntxjson).Append("\n");
+            sb.Append("  Chaintype: ").Append(Chaintype).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -218,14 +293,35 @@ namespace Org.OpenAPITools.Model
                     this.Time.Equals(input.Time))
                 ) && 
                 (
-                    this.Randomtoken == input.Randomtoken ||
-                    (this.Randomtoken != null &&
-                    this.Randomtoken.Equals(input.Randomtoken))
+                    this.Token == input.Token ||
+                    (this.Token != null &&
+                    this.Token.Equals(input.Token))
+                ) && 
+                (
+                    this.Paymentpass == input.Paymentpass ||
+                    (this.Paymentpass != null &&
+                    this.Paymentpass.Equals(input.Paymentpass))
                 ) && 
                 (
                     this.Openid == input.Openid ||
                     (this.Openid != null &&
                     this.Openid.Equals(input.Openid))
+                ) && 
+                (
+                    this.From == input.From ||
+                    (this.From != null &&
+                    this.From.Equals(input.From))
+                ) && 
+                (
+                    this.Unsigntxjson == input.Unsigntxjson ||
+                    this.Unsigntxjson != null &&
+                    input.Unsigntxjson != null &&
+                    this.Unsigntxjson.SequenceEqual(input.Unsigntxjson)
+                ) && 
+                (
+                    this.Chaintype == input.Chaintype ||
+                    (this.Chaintype != null &&
+                    this.Chaintype.Equals(input.Chaintype))
                 );
         }
 
@@ -246,10 +342,18 @@ namespace Org.OpenAPITools.Model
                     hashCode = hashCode * 59 + this.Secret.GetHashCode();
                 if (this.Time != null)
                     hashCode = hashCode * 59 + this.Time.GetHashCode();
-                if (this.Randomtoken != null)
-                    hashCode = hashCode * 59 + this.Randomtoken.GetHashCode();
+                if (this.Token != null)
+                    hashCode = hashCode * 59 + this.Token.GetHashCode();
+                if (this.Paymentpass != null)
+                    hashCode = hashCode * 59 + this.Paymentpass.GetHashCode();
                 if (this.Openid != null)
                     hashCode = hashCode * 59 + this.Openid.GetHashCode();
+                if (this.From != null)
+                    hashCode = hashCode * 59 + this.From.GetHashCode();
+                if (this.Unsigntxjson != null)
+                    hashCode = hashCode * 59 + this.Unsigntxjson.GetHashCode();
+                if (this.Chaintype != null)
+                    hashCode = hashCode * 59 + this.Chaintype.GetHashCode();
                 return hashCode;
             }
         }

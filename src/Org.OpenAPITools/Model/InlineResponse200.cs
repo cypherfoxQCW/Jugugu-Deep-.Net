@@ -38,45 +38,94 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineResponse200" /> class.
         /// </summary>
-        /// <param name="state">-1代表失败并错误，0代表失败并提示，1代表成功 (required).</param>
-        /// <param name="msg">详细信息 (required).</param>
-        public InlineResponse200(string state = default(string), string msg = default(string))
+        /// <param name="phone">phone (required).</param>
+        /// <param name="confluxaddress">confluxaddress (required).</param>
+        /// <param name="ethaddress">ethaddress (required).</param>
+        /// <param name="paymentpassword">paymentpassword (required).</param>
+        /// <param name="token">token (required).</param>
+        public InlineResponse200(string phone = default(string), string confluxaddress = default(string), string ethaddress = default(string), string paymentpassword = default(string), string token = default(string))
         {
-            // to ensure "state" is required (not null)
-            if (state == null)
+            // to ensure "phone" is required (not null)
+            if (phone == null)
             {
-                throw new InvalidDataException("state is a required property for InlineResponse200 and cannot be null");
+                throw new InvalidDataException("phone is a required property for InlineResponse200 and cannot be null");
             }
             else
             {
-                this.State = state;
+                this.Phone = phone;
             }
             
-            // to ensure "msg" is required (not null)
-            if (msg == null)
+            // to ensure "confluxaddress" is required (not null)
+            if (confluxaddress == null)
             {
-                throw new InvalidDataException("msg is a required property for InlineResponse200 and cannot be null");
+                throw new InvalidDataException("confluxaddress is a required property for InlineResponse200 and cannot be null");
             }
             else
             {
-                this.Msg = msg;
+                this.Confluxaddress = confluxaddress;
+            }
+            
+            // to ensure "ethaddress" is required (not null)
+            if (ethaddress == null)
+            {
+                throw new InvalidDataException("ethaddress is a required property for InlineResponse200 and cannot be null");
+            }
+            else
+            {
+                this.Ethaddress = ethaddress;
+            }
+            
+            // to ensure "paymentpassword" is required (not null)
+            if (paymentpassword == null)
+            {
+                throw new InvalidDataException("paymentpassword is a required property for InlineResponse200 and cannot be null");
+            }
+            else
+            {
+                this.Paymentpassword = paymentpassword;
+            }
+            
+            // to ensure "token" is required (not null)
+            if (token == null)
+            {
+                throw new InvalidDataException("token is a required property for InlineResponse200 and cannot be null");
+            }
+            else
+            {
+                this.Token = token;
             }
             
         }
         
         /// <summary>
-        /// -1代表失败并错误，0代表失败并提示，1代表成功
+        /// Gets or Sets Phone
         /// </summary>
-        /// <value>-1代表失败并错误，0代表失败并提示，1代表成功</value>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
+        [DataMember(Name="phone", EmitDefaultValue=false)]
+        public string Phone { get; set; }
 
         /// <summary>
-        /// 详细信息
+        /// Gets or Sets Confluxaddress
         /// </summary>
-        /// <value>详细信息</value>
-        [DataMember(Name="msg", EmitDefaultValue=false)]
-        public string Msg { get; set; }
+        [DataMember(Name="confluxaddress", EmitDefaultValue=false)]
+        public string Confluxaddress { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Ethaddress
+        /// </summary>
+        [DataMember(Name="ethaddress", EmitDefaultValue=false)]
+        public string Ethaddress { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Paymentpassword
+        /// </summary>
+        [DataMember(Name="paymentpassword", EmitDefaultValue=false)]
+        public string Paymentpassword { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Token
+        /// </summary>
+        [DataMember(Name="token", EmitDefaultValue=false)]
+        public string Token { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -86,8 +135,11 @@ namespace Org.OpenAPITools.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InlineResponse200 {\n");
-            sb.Append("  State: ").Append(State).Append("\n");
-            sb.Append("  Msg: ").Append(Msg).Append("\n");
+            sb.Append("  Phone: ").Append(Phone).Append("\n");
+            sb.Append("  Confluxaddress: ").Append(Confluxaddress).Append("\n");
+            sb.Append("  Ethaddress: ").Append(Ethaddress).Append("\n");
+            sb.Append("  Paymentpassword: ").Append(Paymentpassword).Append("\n");
+            sb.Append("  Token: ").Append(Token).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,14 +175,29 @@ namespace Org.OpenAPITools.Model
 
             return 
                 (
-                    this.State == input.State ||
-                    (this.State != null &&
-                    this.State.Equals(input.State))
+                    this.Phone == input.Phone ||
+                    (this.Phone != null &&
+                    this.Phone.Equals(input.Phone))
                 ) && 
                 (
-                    this.Msg == input.Msg ||
-                    (this.Msg != null &&
-                    this.Msg.Equals(input.Msg))
+                    this.Confluxaddress == input.Confluxaddress ||
+                    (this.Confluxaddress != null &&
+                    this.Confluxaddress.Equals(input.Confluxaddress))
+                ) && 
+                (
+                    this.Ethaddress == input.Ethaddress ||
+                    (this.Ethaddress != null &&
+                    this.Ethaddress.Equals(input.Ethaddress))
+                ) && 
+                (
+                    this.Paymentpassword == input.Paymentpassword ||
+                    (this.Paymentpassword != null &&
+                    this.Paymentpassword.Equals(input.Paymentpassword))
+                ) && 
+                (
+                    this.Token == input.Token ||
+                    (this.Token != null &&
+                    this.Token.Equals(input.Token))
                 );
         }
 
@@ -143,10 +210,16 @@ namespace Org.OpenAPITools.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.State != null)
-                    hashCode = hashCode * 59 + this.State.GetHashCode();
-                if (this.Msg != null)
-                    hashCode = hashCode * 59 + this.Msg.GetHashCode();
+                if (this.Phone != null)
+                    hashCode = hashCode * 59 + this.Phone.GetHashCode();
+                if (this.Confluxaddress != null)
+                    hashCode = hashCode * 59 + this.Confluxaddress.GetHashCode();
+                if (this.Ethaddress != null)
+                    hashCode = hashCode * 59 + this.Ethaddress.GetHashCode();
+                if (this.Paymentpassword != null)
+                    hashCode = hashCode * 59 + this.Paymentpassword.GetHashCode();
+                if (this.Token != null)
+                    hashCode = hashCode * 59 + this.Token.GetHashCode();
                 return hashCode;
             }
         }

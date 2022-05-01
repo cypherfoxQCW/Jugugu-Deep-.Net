@@ -9,8 +9,12 @@ Name | Type | Description | Notes
 **Account** | **string** | 通过接入jugugu申请 | 
 **Secret** | **string** | 通过接入jugugu申请 | 
 **Time** | **int** | int64类型 | 
-**Randomtoken** | **string** | 可以由sha256函数随机产生，避免2分钟内重复，可用时间+其他唯一参数作为种子，防止重放攻击 | 
+**Token** | **string** | 登录或者首次登录时获得 | 
+**Paymentpass** | **string** | 可以自由设置也可以传“”空字符串，系统随机生成，建议让系统随机生成 | 
 **Openid** | **string** | 项目方账户系统的唯一识别码，用于绑定登录jugugu系统 | 
+**From** | **string** | jugugu区块链地址，与phone对应 | 
+**Unsigntxjson** | **List&lt;string&gt;** |  | 
+**Chaintype** | **string** | 这里填cfx即可 | 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

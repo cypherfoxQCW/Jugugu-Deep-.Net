@@ -31,9 +31,9 @@ namespace Org.OpenAPITools.Api
         /// 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行小红花POAP领取。
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"> (optional)</param>
-        /// <returns>InlineResponse200</returns>
-        InlineResponse200 JuguguFastGetNFTPost (InlineObject inlineObject = default(InlineObject));
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>InlineResponse2001</returns>
+        InlineResponse2001 JuguguFastGetNFTPost (InlineObject2 inlineObject2 = default(InlineObject2));
 
         /// <summary>
         /// 3.jugugu获取小红花POAP
@@ -42,30 +42,30 @@ namespace Org.OpenAPITools.Api
         /// 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行小红花POAP领取。
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>ApiResponse of InlineResponse2001</returns>
+        ApiResponse<InlineResponse2001> JuguguFastGetNFTPostWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2));
+        /// <summary>
+        /// 2.注册jugugu登录
+        /// </summary>
+        /// <remarks>
+        /// 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject"> (optional)</param>
+        /// <returns>InlineResponse200</returns>
+        InlineResponse200 JuguguFastLoginPost (InlineObject inlineObject = default(InlineObject));
+
+        /// <summary>
+        /// 2.注册jugugu登录
+        /// </summary>
+        /// <remarks>
+        /// 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject"> (optional)</param>
         /// <returns>ApiResponse of InlineResponse200</returns>
-        ApiResponse<InlineResponse200> JuguguFastGetNFTPostWithHttpInfo (InlineObject inlineObject = default(InlineObject));
-        /// <summary>
-        /// 2.注册jugugu登录
-        /// </summary>
-        /// <remarks>
-        /// 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
-        /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject3"> (optional)</param>
-        /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 JuguguFastLoginPost (InlineObject3 inlineObject3 = default(InlineObject3));
-
-        /// <summary>
-        /// 2.注册jugugu登录
-        /// </summary>
-        /// <remarks>
-        /// 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
-        /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject3"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> JuguguFastLoginPostWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3));
+        ApiResponse<InlineResponse200> JuguguFastLoginPostWithHttpInfo (InlineObject inlineObject = default(InlineObject));
         /// <summary>
         /// 1.注册jugugu
         /// </summary>
@@ -74,8 +74,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject1"> (optional)</param>
-        /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 JuguguFastRegPost (InlineObject1 inlineObject1 = default(InlineObject1));
+        /// <returns>InlineResponse200</returns>
+        InlineResponse200 JuguguFastRegPost (InlineObject1 inlineObject1 = default(InlineObject1));
 
         /// <summary>
         /// 1.注册jugugu
@@ -85,8 +85,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject1"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> JuguguFastRegPostWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1));
+        /// <returns>ApiResponse of InlineResponse200</returns>
+        ApiResponse<InlineResponse200> JuguguFastRegPostWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1));
         /// <summary>
         /// 4.使用jugugu进行交易签名
         /// </summary>
@@ -94,9 +94,9 @@ namespace Org.OpenAPITools.Api
         /// 使用项目方自己账户体系的OpenID，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行交易签名,返回签名后的交易数据rowData。详情见示例代码
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject2"> (optional)</param>
+        /// <param name="inlineObject3"> (optional)</param>
         /// <returns>Object</returns>
-        Object JuguguFastSignTxPost (InlineObject2 inlineObject2 = default(InlineObject2));
+        Object JuguguFastSignTxPost (InlineObject3 inlineObject3 = default(InlineObject3));
 
         /// <summary>
         /// 4.使用jugugu进行交易签名
@@ -105,9 +105,9 @@ namespace Org.OpenAPITools.Api
         /// 使用项目方自己账户体系的OpenID，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行交易签名,返回签名后的交易数据rowData。详情见示例代码
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject2"> (optional)</param>
+        /// <param name="inlineObject3"> (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> JuguguFastSignTxPostWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2));
+        ApiResponse<Object> JuguguFastSignTxPostWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -117,9 +117,9 @@ namespace Org.OpenAPITools.Api
         /// 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行小红花POAP领取。
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"> (optional)</param>
-        /// <returns>Task of InlineResponse200</returns>
-        System.Threading.Tasks.Task<InlineResponse200> JuguguFastGetNFTPostAsync (InlineObject inlineObject = default(InlineObject));
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>Task of InlineResponse2001</returns>
+        System.Threading.Tasks.Task<InlineResponse2001> JuguguFastGetNFTPostAsync (InlineObject2 inlineObject2 = default(InlineObject2));
 
         /// <summary>
         /// 3.jugugu获取小红花POAP
@@ -128,30 +128,30 @@ namespace Org.OpenAPITools.Api
         /// 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行小红花POAP领取。
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> JuguguFastGetNFTPostAsyncWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2));
+        /// <summary>
+        /// 2.注册jugugu登录
+        /// </summary>
+        /// <remarks>
+        /// 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject"> (optional)</param>
+        /// <returns>Task of InlineResponse200</returns>
+        System.Threading.Tasks.Task<InlineResponse200> JuguguFastLoginPostAsync (InlineObject inlineObject = default(InlineObject));
+
+        /// <summary>
+        /// 2.注册jugugu登录
+        /// </summary>
+        /// <remarks>
+        /// 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject"> (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> JuguguFastGetNFTPostAsyncWithHttpInfo (InlineObject inlineObject = default(InlineObject));
-        /// <summary>
-        /// 2.注册jugugu登录
-        /// </summary>
-        /// <remarks>
-        /// 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
-        /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject3"> (optional)</param>
-        /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> JuguguFastLoginPostAsync (InlineObject3 inlineObject3 = default(InlineObject3));
-
-        /// <summary>
-        /// 2.注册jugugu登录
-        /// </summary>
-        /// <remarks>
-        /// 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
-        /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject3"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> JuguguFastLoginPostAsyncWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3));
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> JuguguFastLoginPostAsyncWithHttpInfo (InlineObject inlineObject = default(InlineObject));
         /// <summary>
         /// 1.注册jugugu
         /// </summary>
@@ -160,8 +160,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject1"> (optional)</param>
-        /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> JuguguFastRegPostAsync (InlineObject1 inlineObject1 = default(InlineObject1));
+        /// <returns>Task of InlineResponse200</returns>
+        System.Threading.Tasks.Task<InlineResponse200> JuguguFastRegPostAsync (InlineObject1 inlineObject1 = default(InlineObject1));
 
         /// <summary>
         /// 1.注册jugugu
@@ -171,8 +171,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject1"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> JuguguFastRegPostAsyncWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1));
+        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> JuguguFastRegPostAsyncWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1));
         /// <summary>
         /// 4.使用jugugu进行交易签名
         /// </summary>
@@ -180,9 +180,9 @@ namespace Org.OpenAPITools.Api
         /// 使用项目方自己账户体系的OpenID，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行交易签名,返回签名后的交易数据rowData。详情见示例代码
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject2"> (optional)</param>
+        /// <param name="inlineObject3"> (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> JuguguFastSignTxPostAsync (InlineObject2 inlineObject2 = default(InlineObject2));
+        System.Threading.Tasks.Task<Object> JuguguFastSignTxPostAsync (InlineObject3 inlineObject3 = default(InlineObject3));
 
         /// <summary>
         /// 4.使用jugugu进行交易签名
@@ -191,9 +191,9 @@ namespace Org.OpenAPITools.Api
         /// 使用项目方自己账户体系的OpenID，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行交易签名,返回签名后的交易数据rowData。详情见示例代码
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject2"> (optional)</param>
+        /// <param name="inlineObject3"> (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> JuguguFastSignTxPostAsyncWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2));
+        System.Threading.Tasks.Task<ApiResponse<Object>> JuguguFastSignTxPostAsyncWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3));
         #endregion Asynchronous Operations
     }
 
@@ -309,453 +309,24 @@ namespace Org.OpenAPITools.Api
         /// 3.jugugu获取小红花POAP 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行小红花POAP领取。
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"> (optional)</param>
-        /// <returns>InlineResponse200</returns>
-        public InlineResponse200 JuguguFastGetNFTPost (InlineObject inlineObject = default(InlineObject))
-        {
-             ApiResponse<InlineResponse200> localVarResponse = JuguguFastGetNFTPostWithHttpInfo(inlineObject);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// 3.jugugu获取小红花POAP 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行小红花POAP领取。
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse200</returns>
-        public ApiResponse<InlineResponse200> JuguguFastGetNFTPostWithHttpInfo (InlineObject inlineObject = default(InlineObject))
-        {
-
-            var localVarPath = "/Jugugu_FastGetNFT";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (inlineObject != null && inlineObject.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = inlineObject; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("JuguguFastGetNFTPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse200) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
-        }
-
-        /// <summary>
-        /// 3.jugugu获取小红花POAP 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行小红花POAP领取。
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"> (optional)</param>
-        /// <returns>Task of InlineResponse200</returns>
-        public async System.Threading.Tasks.Task<InlineResponse200> JuguguFastGetNFTPostAsync (InlineObject inlineObject = default(InlineObject))
-        {
-             ApiResponse<InlineResponse200> localVarResponse = await JuguguFastGetNFTPostAsyncWithHttpInfo(inlineObject);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// 3.jugugu获取小红花POAP 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行小红花POAP领取。
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> JuguguFastGetNFTPostAsyncWithHttpInfo (InlineObject inlineObject = default(InlineObject))
-        {
-
-            var localVarPath = "/Jugugu_FastGetNFT";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (inlineObject != null && inlineObject.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = inlineObject; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("JuguguFastGetNFTPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse200) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
-        }
-
-        /// <summary>
-        /// 2.注册jugugu登录 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject3"> (optional)</param>
+        /// <param name="inlineObject2"> (optional)</param>
         /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 JuguguFastLoginPost (InlineObject3 inlineObject3 = default(InlineObject3))
+        public InlineResponse2001 JuguguFastGetNFTPost (InlineObject2 inlineObject2 = default(InlineObject2))
         {
-             ApiResponse<InlineResponse2001> localVarResponse = JuguguFastLoginPostWithHttpInfo(inlineObject3);
+             ApiResponse<InlineResponse2001> localVarResponse = JuguguFastGetNFTPostWithHttpInfo(inlineObject2);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// 2.注册jugugu登录 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject3"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse<InlineResponse2001> JuguguFastLoginPostWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3))
-        {
-
-            var localVarPath = "/Jugugu_FastLogin";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (inlineObject3 != null && inlineObject3.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject3); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = inlineObject3; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("JuguguFastLoginPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2001) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
-        }
-
-        /// <summary>
-        /// 2.注册jugugu登录 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject3"> (optional)</param>
-        /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> JuguguFastLoginPostAsync (InlineObject3 inlineObject3 = default(InlineObject3))
-        {
-             ApiResponse<InlineResponse2001> localVarResponse = await JuguguFastLoginPostAsyncWithHttpInfo(inlineObject3);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// 2.注册jugugu登录 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject3"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> JuguguFastLoginPostAsyncWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3))
-        {
-
-            var localVarPath = "/Jugugu_FastLogin";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (inlineObject3 != null && inlineObject3.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject3); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = inlineObject3; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("JuguguFastLoginPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2001) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
-        }
-
-        /// <summary>
-        /// 1.注册jugugu 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，如果该手机已经注册jugugu则直接进行绑定OpenID。注册的用户返回短密钥，绑定的用户不返回短密钥，短密钥请务必加密存储，建议使用ECC256进行加密，加密解密密钥妥善保存，建议内存中存放
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject1"> (optional)</param>
-        /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 JuguguFastRegPost (InlineObject1 inlineObject1 = default(InlineObject1))
-        {
-             ApiResponse<InlineResponse2001> localVarResponse = JuguguFastRegPostWithHttpInfo(inlineObject1);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// 1.注册jugugu 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，如果该手机已经注册jugugu则直接进行绑定OpenID。注册的用户返回短密钥，绑定的用户不返回短密钥，短密钥请务必加密存储，建议使用ECC256进行加密，加密解密密钥妥善保存，建议内存中存放
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject1"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse<InlineResponse2001> JuguguFastRegPostWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1))
-        {
-
-            var localVarPath = "/Jugugu_FastReg";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (inlineObject1 != null && inlineObject1.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject1); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = inlineObject1; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("JuguguFastRegPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2001) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
-        }
-
-        /// <summary>
-        /// 1.注册jugugu 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，如果该手机已经注册jugugu则直接进行绑定OpenID。注册的用户返回短密钥，绑定的用户不返回短密钥，短密钥请务必加密存储，建议使用ECC256进行加密，加密解密密钥妥善保存，建议内存中存放
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject1"> (optional)</param>
-        /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> JuguguFastRegPostAsync (InlineObject1 inlineObject1 = default(InlineObject1))
-        {
-             ApiResponse<InlineResponse2001> localVarResponse = await JuguguFastRegPostAsyncWithHttpInfo(inlineObject1);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// 1.注册jugugu 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，如果该手机已经注册jugugu则直接进行绑定OpenID。注册的用户返回短密钥，绑定的用户不返回短密钥，短密钥请务必加密存储，建议使用ECC256进行加密，加密解密密钥妥善保存，建议内存中存放
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject1"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> JuguguFastRegPostAsyncWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1))
-        {
-
-            var localVarPath = "/Jugugu_FastReg";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (inlineObject1 != null && inlineObject1.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject1); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = inlineObject1; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("JuguguFastRegPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2001) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
-        }
-
-        /// <summary>
-        /// 4.使用jugugu进行交易签名 使用项目方自己账户体系的OpenID，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行交易签名,返回签名后的交易数据rowData。详情见示例代码
+        /// 3.jugugu获取小红花POAP 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行小红花POAP领取。
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject2"> (optional)</param>
-        /// <returns>Object</returns>
-        public Object JuguguFastSignTxPost (InlineObject2 inlineObject2 = default(InlineObject2))
-        {
-             ApiResponse<Object> localVarResponse = JuguguFastSignTxPostWithHttpInfo(inlineObject2);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// 4.使用jugugu进行交易签名 使用项目方自己账户体系的OpenID，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行交易签名,返回签名后的交易数据rowData。详情见示例代码
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject2"> (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse<Object> JuguguFastSignTxPostWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2))
+        /// <returns>ApiResponse of InlineResponse2001</returns>
+        public ApiResponse<InlineResponse2001> JuguguFastGetNFTPostWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2))
         {
 
-            var localVarPath = "/Jugugu_FastSignTx";
+            var localVarPath = "/Jugugu_FastGetNFT";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -784,6 +355,435 @@ namespace Org.OpenAPITools.Api
             else
             {
                 localVarPostBody = inlineObject2; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("JuguguFastGetNFTPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse2001) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+        }
+
+        /// <summary>
+        /// 3.jugugu获取小红花POAP 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行小红花POAP领取。
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>Task of InlineResponse2001</returns>
+        public async System.Threading.Tasks.Task<InlineResponse2001> JuguguFastGetNFTPostAsync (InlineObject2 inlineObject2 = default(InlineObject2))
+        {
+             ApiResponse<InlineResponse2001> localVarResponse = await JuguguFastGetNFTPostAsyncWithHttpInfo(inlineObject2);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// 3.jugugu获取小红花POAP 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行小红花POAP领取。
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> JuguguFastGetNFTPostAsyncWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2))
+        {
+
+            var localVarPath = "/Jugugu_FastGetNFT";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inlineObject2 != null && inlineObject2.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject2); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = inlineObject2; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("JuguguFastGetNFTPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse2001) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+        }
+
+        /// <summary>
+        /// 2.注册jugugu登录 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject"> (optional)</param>
+        /// <returns>InlineResponse200</returns>
+        public InlineResponse200 JuguguFastLoginPost (InlineObject inlineObject = default(InlineObject))
+        {
+             ApiResponse<InlineResponse200> localVarResponse = JuguguFastLoginPostWithHttpInfo(inlineObject);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// 2.注册jugugu登录 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject"> (optional)</param>
+        /// <returns>ApiResponse of InlineResponse200</returns>
+        public ApiResponse<InlineResponse200> JuguguFastLoginPostWithHttpInfo (InlineObject inlineObject = default(InlineObject))
+        {
+
+            var localVarPath = "/Jugugu_FastLogin";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inlineObject != null && inlineObject.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = inlineObject; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("JuguguFastLoginPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse200) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+        }
+
+        /// <summary>
+        /// 2.注册jugugu登录 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject"> (optional)</param>
+        /// <returns>Task of InlineResponse200</returns>
+        public async System.Threading.Tasks.Task<InlineResponse200> JuguguFastLoginPostAsync (InlineObject inlineObject = default(InlineObject))
+        {
+             ApiResponse<InlineResponse200> localVarResponse = await JuguguFastLoginPostAsyncWithHttpInfo(inlineObject);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// 2.注册jugugu登录 使用项目方自己账户体系OpenID,用户手机号，项目方接入jugugu的Account和Secret登录用户jugugu账户，获得登录token  该token用于后续函数调用
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject"> (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> JuguguFastLoginPostAsyncWithHttpInfo (InlineObject inlineObject = default(InlineObject))
+        {
+
+            var localVarPath = "/Jugugu_FastLogin";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inlineObject != null && inlineObject.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = inlineObject; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("JuguguFastLoginPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse200) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+        }
+
+        /// <summary>
+        /// 1.注册jugugu 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，如果该手机已经注册jugugu则直接进行绑定OpenID。注册的用户返回短密钥，绑定的用户不返回短密钥，短密钥请务必加密存储，建议使用ECC256进行加密，加密解密密钥妥善保存，建议内存中存放
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject1"> (optional)</param>
+        /// <returns>InlineResponse200</returns>
+        public InlineResponse200 JuguguFastRegPost (InlineObject1 inlineObject1 = default(InlineObject1))
+        {
+             ApiResponse<InlineResponse200> localVarResponse = JuguguFastRegPostWithHttpInfo(inlineObject1);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// 1.注册jugugu 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，如果该手机已经注册jugugu则直接进行绑定OpenID。注册的用户返回短密钥，绑定的用户不返回短密钥，短密钥请务必加密存储，建议使用ECC256进行加密，加密解密密钥妥善保存，建议内存中存放
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject1"> (optional)</param>
+        /// <returns>ApiResponse of InlineResponse200</returns>
+        public ApiResponse<InlineResponse200> JuguguFastRegPostWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1))
+        {
+
+            var localVarPath = "/Jugugu_FastReg";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inlineObject1 != null && inlineObject1.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject1); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = inlineObject1; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("JuguguFastRegPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse200) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+        }
+
+        /// <summary>
+        /// 1.注册jugugu 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，如果该手机已经注册jugugu则直接进行绑定OpenID。注册的用户返回短密钥，绑定的用户不返回短密钥，短密钥请务必加密存储，建议使用ECC256进行加密，加密解密密钥妥善保存，建议内存中存放
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject1"> (optional)</param>
+        /// <returns>Task of InlineResponse200</returns>
+        public async System.Threading.Tasks.Task<InlineResponse200> JuguguFastRegPostAsync (InlineObject1 inlineObject1 = default(InlineObject1))
+        {
+             ApiResponse<InlineResponse200> localVarResponse = await JuguguFastRegPostAsyncWithHttpInfo(inlineObject1);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// 1.注册jugugu 使用项目方自己账户体系的OpenID注册并绑定jugugu账号，如果该手机已经注册jugugu则直接进行绑定OpenID。注册的用户返回短密钥，绑定的用户不返回短密钥，短密钥请务必加密存储，建议使用ECC256进行加密，加密解密密钥妥善保存，建议内存中存放
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject1"> (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> JuguguFastRegPostAsyncWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1))
+        {
+
+            var localVarPath = "/Jugugu_FastReg";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inlineObject1 != null && inlineObject1.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject1); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = inlineObject1; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("JuguguFastRegPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse200) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+        }
+
+        /// <summary>
+        /// 4.使用jugugu进行交易签名 使用项目方自己账户体系的OpenID，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行交易签名,返回签名后的交易数据rowData。详情见示例代码
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject3"> (optional)</param>
+        /// <returns>Object</returns>
+        public Object JuguguFastSignTxPost (InlineObject3 inlineObject3 = default(InlineObject3))
+        {
+             ApiResponse<Object> localVarResponse = JuguguFastSignTxPostWithHttpInfo(inlineObject3);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// 4.使用jugugu进行交易签名 使用项目方自己账户体系的OpenID，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行交易签名,返回签名后的交易数据rowData。详情见示例代码
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject3"> (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse<Object> JuguguFastSignTxPostWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3))
+        {
+
+            var localVarPath = "/Jugugu_FastSignTx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inlineObject3 != null && inlineObject3.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject3); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = inlineObject3; // byte array
             }
 
 
@@ -809,11 +809,11 @@ namespace Org.OpenAPITools.Api
         /// 4.使用jugugu进行交易签名 使用项目方自己账户体系的OpenID，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行交易签名,返回签名后的交易数据rowData。详情见示例代码
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject2"> (optional)</param>
+        /// <param name="inlineObject3"> (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> JuguguFastSignTxPostAsync (InlineObject2 inlineObject2 = default(InlineObject2))
+        public async System.Threading.Tasks.Task<Object> JuguguFastSignTxPostAsync (InlineObject3 inlineObject3 = default(InlineObject3))
         {
-             ApiResponse<Object> localVarResponse = await JuguguFastSignTxPostAsyncWithHttpInfo(inlineObject2);
+             ApiResponse<Object> localVarResponse = await JuguguFastSignTxPostAsyncWithHttpInfo(inlineObject3);
              return localVarResponse.Data;
 
         }
@@ -822,9 +822,9 @@ namespace Org.OpenAPITools.Api
         /// 4.使用jugugu进行交易签名 使用项目方自己账户体系的OpenID，项目方接入jugugu的Account和Secret以及用户登录后的登录令牌token，等参数请求进行交易签名,返回签名后的交易数据rowData。详情见示例代码
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inlineObject2"> (optional)</param>
+        /// <param name="inlineObject3"> (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> JuguguFastSignTxPostAsyncWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2))
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> JuguguFastSignTxPostAsyncWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3))
         {
 
             var localVarPath = "/Jugugu_FastSignTx";
@@ -849,13 +849,13 @@ namespace Org.OpenAPITools.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (inlineObject2 != null && inlineObject2.GetType() != typeof(byte[]))
+            if (inlineObject3 != null && inlineObject3.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject2); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject3); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = inlineObject2; // byte array
+                localVarPostBody = inlineObject3; // byte array
             }
 
 
